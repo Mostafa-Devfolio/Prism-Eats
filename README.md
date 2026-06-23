@@ -34,11 +34,20 @@ This project was developed with a strong focus on performance, avoiding unnecess
 - **Server Actions:** All data mutations (Add/Edit products, update orders) are handled securely via Next.js Server Actions.
 - **Hydration Safe:** Custom hooks and logic implemented to safely read from `localStorage` without causing SSR hydration mismatches.
 
+## Quick Access
+- **Live Demo:** [https://electropi.devfolio.net](https://electropi.devfolio.net)
+- **Admin Credentials:**
+  - **Email:** admin@electro.pi
+  - **Password:** ElectroPi
+
+**The application is fully deployed and ready for review. If you prefer to run it locally, please follow the "Getting Started" section below.**
+
 ## Getting Started
 
 ### 1. Clone the repository
 ```bash
-git clone [https://github.com/yourusername/prism-eats.git](https://github.com/yourusername/prism-eats.git)
+git clone [https://github.com/Mostafa-Devfolio/Prism-Eats.git](https://github.com/Mostafa-Devfolio/Prism-Eats.git)
+
 cd prism-eats
 
 2. Install dependencies
@@ -65,7 +74,6 @@ Open http://localhost:3000 in your browser.
 To review the Admin Dashboard, you can log in using the following seeded admin credentials:
 
 Email: admin@electro.pi
-
 Password: ElectroPi
 
 Alternatively, register a new account and manually update the user role to ADMIN in the database.
