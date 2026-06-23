@@ -1,4 +1,3 @@
-// app/admin/orders/page.tsx
 import { PrismaClient } from "@prisma/client";
 import StatusSelect from "./StatusSelect";
 

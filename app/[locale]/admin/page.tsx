@@ -81,7 +81,7 @@ export default async function AdminDashboardPage() {
         </div>
 
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
-          {/* 1. Bar Chart (Tailwind Custom) */}
+          {/* 1. Bar Chart */}
           <div className="lg:col-span-2 rounded-3xl bg-white p-6 shadow-[0_10px_40px_-15px_rgba(20,12,8,0.05)] border border-[#F0E9DB]">
             <div className="mb-8 flex items-center gap-2">
               <TrendingUp className="text-[#D64C1E]" size={20} />
@@ -97,10 +97,8 @@ export default async function AdminDashboardPage() {
                   className="group relative flex h-full flex-1 flex-col items-center justify-end gap-2"
                 >
                   <div className="relative flex w-full flex-1 items-end justify-center overflow-hidden rounded-t-xl bg-[#FCEFE6]/50">
-                    {/* Tooltip بيظهر لما تقف بالماوس على العمود */}
                     <div className="absolute -top-10 z-10 hidden rounded-lg bg-[#1A1310] px-3 py-1.5 text-xs font-bold text-white shadow-lg group-hover:block">
                       ${day.total.toFixed(2)}
-                      {/* السهم الصغير للـ Tooltip */}
                       <div className="absolute -bottom-1 left-1/2 h-2 w-2 -translate-x-1/2 rotate-45 bg-[#1A1310]"></div>
                     </div>
 

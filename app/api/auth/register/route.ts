@@ -16,7 +16,6 @@ export async function POST(req: Request) {
       );
     }
 
-    // التأكد إن الإيميل مش متسجل قبل كده
     const existingUser = await prisma.user.findUnique({
       where: { email },
     });

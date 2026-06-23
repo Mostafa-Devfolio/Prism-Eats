@@ -147,7 +147,7 @@ export default function AdminProductsPage({
                 ))}
               </div>
 
-              {/* أزرار الـ Pagination */}
+              {/* Pagination */}
               {totalPages > 1 && (
                 <div className="mt-8 flex items-center justify-center gap-4">
                   <button

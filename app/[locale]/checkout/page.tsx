@@ -120,7 +120,7 @@ function CheckoutFormComponent() {
   };
 
   return (
-    <div className="mx-auto w-full max-w-lg rounded-3xl bg-white p-6 shadow-[0_10px_40px_-15px_rgba(20,12,8,0.15)] sm:p-8">
+    <div className="mx-3 my-6 w-full max-w-lg rounded-3xl bg-white p-4 shadow-[0_10px_40px_-15px_rgba(20,12,8,0.15)] sm:mx-auto sm:p-6 md:p-8">
       <Toaster position="top-center" />
 
       <h2 className="mb-6 text-xl font-extrabold text-[#1A1310]">
@@ -235,7 +235,7 @@ function CheckoutFormComponent() {
                   return (
                     <label
                       key={option.value}
-                      className={`flex cursor-pointer items-start gap-3 rounded-xl border p-3.5 transition-colors ${
+                      className={`flex cursor-pointer items-start gap-3 rounded-xl border p-3 sm:p-3.5 transition-colors ${
                         isSelected
                           ? "border-[#D64C1E] bg-[#FCEFE6]"
                           : "border-[#E5DACB] bg-[#FBF6EE] hover:border-[#D9CDBB]"
@@ -254,11 +254,11 @@ function CheckoutFormComponent() {
                           isSelected ? "text-[#D64C1E]" : "text-[#A89A87]"
                         }
                       />
-                      <div className="flex flex-col">
+                      <div className="flex min-w-0 flex-col">
                         <span className="text-sm font-semibold text-[#1A1310]">
                           {option.label}
                         </span>
-                        <span className="text-xs text-[#6B5D4F]">
+                        <span className="text-xs text-[#6B5D4F] wrap-break-word">
                           {option.description}
                         </span>
                       </div>
