@@ -1,0 +1,8 @@
+{
+  "menu": {
+    "fresh": "Freshly Made",
+    "addToCart": "Add to Cart",
+    "emptyTitle": "Menu is empty",
+    "emptyDescription": "We are adding new delicious items soon!"
+  }
+}

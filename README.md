@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PRISM Eats - Food Ordering Platform
+
+A full-stack food ordering web application built as a technical prototype. The platform supports a complete customer journey from browsing the menu to tracking order status, alongside a secure admin dashboard for managing products and monitoring incoming orders.
+
+This project was developed with a strong focus on performance, avoiding unnecessary re-renders, and implementing a clean architecture using Next.js App Router.
+
+## Features
+
+- **Dynamic Menu:** Paginated/Lazy-loaded product grid with images and pricing.
+- **Cart Management:** State managed via Redux Toolkit and synced with `localStorage` for data persistence.
+- **Checkout & Payments:** Supports both Cash on Delivery (COD) and Online Payment options.
+- **Order Tracking:** Interactive visual stepper for customers to track their order status (Pending, Preparing, Delivered).
+
+- **Admin Dashboard:** - Protected route for users with `ADMIN` role.
+  - Live statistics (Revenue, Total Orders, etc.).
+  - Interactive UI to add/edit products and update order statuses.
+- **Authentication:** Secure credential-based login and registration using Next-Auth.
+- **Localization (i18n):** Full support for English (LTR) and Arabic (RTL) using `next-intl`.
+
+## Tech Stack
+
+- **Framework:** Next.js (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS, Lucide Icons
+- **State Management:** Redux Toolkit
+- **Database & ORM:** PostgreSQL / Prisma
+- **Authentication:** Next-Auth
+- **Form Handling & Validation:** React Hook Form + Zod
+- **Internationalization:** Next-intl
+
+## Architectural Highlights
+
+- **Zero Unnecessary Re-renders:** Heavy use of `React.memo`, `useMemo`, and atomic client components (e.g., in the Cart Drawer and Product Cards) to ensure adding an item to the cart doesn't trigger a global layout re-render.
+- **Server Actions:** All data mutations (Add/Edit products, update orders) are handled securely via Next.js Server Actions.
+- **Hydration Safe:** Custom hooks and logic implemented to safely read from `localStorage` without causing SSR hydration mismatches.
 
 ## Getting Started
 
-First, run the development server:
-
+### 1. Clone the repository
 ```bash
+git clone [https://github.com/yourusername/prism-eats.git](https://github.com/yourusername/prism-eats.git)
+cd prism-eats
+
+2. Install dependencies
+npm install
+
+3. Environment Variables
+Create a .env file in the root directory and add the following variables. (Replace the database URL with your own Postgres connection string):
+
+DATABASE_URL="postgresql://user:password@localhost:5432/prism_db?schema=public"
+NEXTAUTH_SECRET="generate_a_random_secret_string_here"
+NEXTAUTH_URL="http://localhost:3000"
+
+4. Database Setup
+Run Prisma migrations to generate the schema:
+npx prisma generate
+npx prisma db push
+npx prisma db seed
+
+5. Run the Application
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Open http://localhost:3000 in your browser.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Admin Access
+To review the Admin Dashboard, you can log in using the following seeded admin credentials:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Email: admin@electro.pi
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Password: ElectroPi
 
-## Learn More
+Alternatively, register a new account and manually update the user role to ADMIN in the database.
 
-To learn more about Next.js, take a look at the following resources:
+- Author
+Mostafa Sherif
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+LinkedIn: https://linkedin.com/in/mostafa-sheriif
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+GitHub: https://github.com/Mostafa-Devfolio
