@@ -1,4 +1,5 @@
 ## Quick Access
+
 - **Live Demo:** [https://electropi.devfolio.net](https://electropi.devfolio.net)
 - **Admin Credentials:**
   - **Email:** admin@electro.pi
@@ -45,6 +46,7 @@ This project was developed with a strong focus on performance, avoiding unnecess
 ## Getting Started
 
 ### 1. Clone the repository
+
 ```bash
 git clone [https://github.com/Mostafa-Devfolio/Prism-Eats.git](https://github.com/Mostafa-Devfolio/Prism-Eats.git)
 
@@ -54,11 +56,17 @@ cd prism-eats
 npm install
 
 3. Environment Variables
-Create a .env file in the root directory and add the following variables. (Replace the database URL with your own Postgres connection string):
+Create a .env file in the root directory based on the .env.example file.
 
-DATABASE_URL="postgresql://user:password@localhost:5432/prism_db?schema=public"
+If running locally, you can use SQLite for a zero-setup experience:
+DATABASE_URL="file:./dev.db"
 NEXTAUTH_SECRET="generate_a_random_secret_string_here"
 NEXTAUTH_URL="http://localhost:3000"
+
+If deploying to a VPS/Server, use your PostgreSQL connection string:
+DATABASE_URL="postgresql://user:password@your-db-host:5432/prism_db"
+NEXTAUTH_SECRET="generate_a_random_secret_string_here"
+NEXTAUTH_URL="http://your-domain.com"
 
 4. Database Setup
 Run Prisma migrations to generate the schema:
@@ -84,3 +92,4 @@ Mostafa Sherif
 LinkedIn: https://linkedin.com/in/mostafa-sheriif
 
 GitHub: https://github.com/Mostafa-Devfolio
+```
