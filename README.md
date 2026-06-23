@@ -1,3 +1,11 @@
+## Quick Access
+- **Live Demo:** [https://electropi.devfolio.net](https://electropi.devfolio.net)
+- **Admin Credentials:**
+  - **Email:** admin@electro.pi
+  - **Password:** ElectroPi
+
+**The application is fully deployed and ready for review. If you prefer to run it locally, please follow the "Getting Started" section below.**
+
 # PRISM Eats - Food Ordering Platform
 
 A full-stack food ordering web application built as a technical prototype. The platform supports a complete customer journey from browsing the menu to tracking order status, alongside a secure admin dashboard for managing products and monitoring incoming orders.
@@ -33,14 +41,6 @@ This project was developed with a strong focus on performance, avoiding unnecess
 - **Zero Unnecessary Re-renders:** Heavy use of `React.memo`, `useMemo`, and atomic client components (e.g., in the Cart Drawer and Product Cards) to ensure adding an item to the cart doesn't trigger a global layout re-render.
 - **Server Actions:** All data mutations (Add/Edit products, update orders) are handled securely via Next.js Server Actions.
 - **Hydration Safe:** Custom hooks and logic implemented to safely read from `localStorage` without causing SSR hydration mismatches.
-
-## Quick Access
-- **Live Demo:** [https://electropi.devfolio.net](https://electropi.devfolio.net)
-- **Admin Credentials:**
-  - **Email:** admin@electro.pi
-  - **Password:** ElectroPi
-
-**The application is fully deployed and ready for review. If you prefer to run it locally, please follow the "Getting Started" section below.**
 
 ## Getting Started
 
